@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+    <title>项目制实践Ⅰ：具身智能实训导论 | 天津大学人工智能学院</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="./EI-TJU/bootstrap.min.css">
+    <!-- Google fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,300" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="./EI-TJU/style.css">
+    <link rel="stylesheet" href="./EI-TJU/font-awesome.min.css">
+    <style>
+      .navbar {
+          margin-bottom: 0; 
+      }
+
+      .sec {
+          padding: 10px 0;  
+          margin-bottom: 0;  
+      }
+
+      #intro {
+          margin-top: 10px;  
+      }
+
+      .course-title {
+          padding: 15px 0;
+          background-color: #1a4f9c;  /* 主题蓝色 */
+          color: white;
+          margin-bottom: 10px;  
+      }
+
+      .course-title h1 {
+          margin: 0;
+          font-size: 24px;
+      }
+
+      h2 {
+          margin-top: 10px;
+          margin-bottom: 10px;
+      }
+
+      .instructor {
+          display: inline-block;                                                                                                                                                                                                                                                                                                                                      
+          margin: 10px 20px;
+          text-align: center;
+      }
+
+      .instructorphoto img {
+          width: 120px;
+          height: 120px;
+          border-radius: 50%;
+          object-fit: cover;
+          margin-bottom: 10px;
+      }
+
+      .instructor a {
+          text-decoration: none;
+          color: #333;
+      }
+
+      .instructor a:hover {
+          text-decoration: none;
+      }
+
+      .ca-section {
+          margin-top: 30px;
+      }
+
+      .ca-list {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 20px;
+          justify-content: flex-start;
+          margin-top: 15px;
+      }
+
+      .ca-item {
+          text-align: center;
+          min-width: 120px;
+      }
+
+      .ca-name {
+          font-weight: 500;
+          margin-bottom: 5px;
+      }
+
+      .ca-title {
+          color: #666;
+          font-size: 14px;
+      }
+
+      .table {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    padding: 1rem;
+    vertical-align: top;
+    border: 1px solid #dee2e6;
+}
+
+.table thead th {
+    vertical-align: bottom;
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+    font-weight: 600;
+}
+
+.reading-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.reading-list li {
+    margin-bottom: 0.5rem;
+}
+
+.guest-lecture-cell {
+    color: #0066cc;
+}
+
+.lecture-title {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.lecture-subtitle {
+    display: block;
+}
+
+.table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+.deadline {
+    color: #1a5fb4;  /* Muted blue */
+    font-weight: normal;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.secondary-event {
+    display: block;
+}
+      .no-class {
+    background-color: #f8f9fa;
+    color: #6c757d;
+}
+
+.no-class td {
+    padding: 0.75rem 1rem;
+}
+      .presentation {
+    color: #198754;  /* Bootstrap green */
+}
+      .footnote {
+    font-size: 0.9em;
+    color: #666;
+    font-style: italic;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+ .lecture-link {
+    color: inherit;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.video-unicode {
+    font-size: 0.9em;
+    opacity: 0.7;
+}
+    </style>
+  <style type="text/css">.src-service-contentScript-browser-contentScript-contentScript__toolFrame--2uksu {
+  position: fixed !important;
+  right: 0 !important;
+  top: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 2147483646 !important;
+  border: none !important;
+}
+.src-service-contentScript-browser-contentScript-contentScript__web-clipper-loading-box--fHTwh {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2147483646;
+  border: none;
+}
+.src-service-contentScript-browser-contentScript-contentScript__web-clipper-loading-box--fHTwh .web-clipper-loading {
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 12px 0px;
+  background: white;
+  width: 324px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.src-service-contentScript-browser-contentScript-contentScript__web-clipper-loading-box--fHTwh .web-clipper-loading .line {
+  animation: src-service-contentScript-browser-contentScript-contentScript__expand--31ZFO 1s ease-in-out infinite;
+  border-radius: 10px;
+  display: inline-block;
+  transform-origin: center center;
+  margin: 0 3px;
+  width: 1px;
+  height: 25px;
+}
+.src-service-contentScript-browser-contentScript-contentScript__web-clipper-loading-box--fHTwh .web-clipper-loading .line:nth-child(1) {
+  background: #27ae60;
+}
+.src-service-contentScript-browser-contentScript-contentScript__web-clipper-loading-box--fHTwh .web-clipper-loading .line:nth-child(2) {
+  animation-delay: 180ms;
+  background: #f1c40f;
+}
+.src-service-contentScript-browser-contentScript-contentScript__web-clipper-loading-box--fHTwh .web-clipper-loading .line:nth-child(3) {
+  animation-delay: 360ms;
+  background: #e67e22;
+}
+.src-service-contentScript-browser-contentScript-contentScript__web-clipper-loading-box--fHTwh .web-clipper-loading .line:nth-child(4) {
+  animation-delay: 540ms;
+  background: #2980b9;
+}
+@keyframes src-service-contentScript-browser-contentScript-contentScript__expand--31ZFO {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(2);
+  }
+}
+</style><style type="text/css">#index_crossLine__2WHMH {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 2147483645;
+}
+#index_crossLine__2WHMH::before {
+  border: none;
+  content: '';
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: 2147483645;
+  border-right: 1px solid blue;
+  border-bottom: 1px solid blue;
+  left: -100%;
+  top: -100%;
+}
+#index_crossLine__2WHMH::after {
+  border: none;
+  content: '';
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: 2147483645;
+  border-top: 1px solid blue;
+  border-left: 1px solid blue;
+  left: 0;
+  top: 0;
+}
+#index_selectArea__2G3Z3 {
+  border: 1px solid blue;
+  position: fixed;
+  z-index: 2147483645;
+}
+</style><style type="text/css">.index_highlightSelector__-qiHd {
+  background-color: #fafafa !important;
+  outline: 3px dashed #1976d2 !important;
+  opacity: 0.8 !important;
+  cursor: pointer !important;
+  transition: opacity 0.5s ease !important;
+}
+</style></head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand brand" href="#intro">项目制实践Ⅰ：具身智能实训导论</a>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="#intro">课程简介</a></li>
+            <li><a href="#people">课程团队</a></li>
+            <li><a href="#schedule">教学安排</a></li>
+            <li><a href="#grading">考核方式</a></li>
+            <li><a href="#policies">课程政策</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    <div class="container sec" id="intro" style="margin-top: 60px;">
+        <h2>课程简介</h2>
+        <p><strong>2026 秋季学期 · 天津大学人工智能学院</strong></p>
+        <p>
+        本课程是大师班具身智能项目制培养的第一学期课程，以桌面机械臂和 LeRobot 统一工具链为载体，
+        组织学生完成 Linux/Git 协作、硬件连接与安全、机械臂标定、遥操作、LeRobot Dataset 采集、
+        行为克隆（BC）、ACT、Diffusion 类策略及 SmolVLA 的分层复现与对比。
+        课程以"数据—策略—评测—实机部署"闭环为主线，使学生在可运行项目中形成对观测、动作、示教数据、
+        策略学习和分布外泛化的工程直觉，是"霍去病"式具身智能人才培养的开局之环节，
+        并为大一下 Agentic Robotics 和大二深度实践具身实训课建立可复现的代码、数据与评测基础。
+        </p>
+        <h3>课程基本信息</h3>
+        <ul>
+          <li><b>课程名称：</b>项目制实践Ⅰ：具身智能实训导论（课号：09499）</li>
+          <li><b>课程类别 / 性质：</b>综合实践课程 / 选修</li>
+          <li><b>学时 / 学分：</b>2.5 周 / 2.5 学分（总计 60 学时）</li>
+          <li><b>适用专业：</b>人工智能、自动化、机械、机器人、计算机及相关专业</li>
+          <li><b>先修课程：</b>Python 程序设计基础；同修课程：线性代数、概率统计、机器人学基础</li>
+          <li><b>教材与参考：</b>自编课程实验手册；LeRobot 官方文档与开源仓库；ACT、Diffusion Policy、SmolVLA 代表性论文及配套数字化资料</li>
+          <li><b>组织形式：</b>6 组 × 5 人的项目组织，角色轮换；按"理论输入—分项实训—阶段质量门—综合交付"递进，建议 16 周完成</li>
+        </ul>
+      </div>
+
+      <div class="container sec" id="people">
+        <div class="col">
+          <h2>课程团队</h2>
+
+          <h3>主讲教师</h3>
+          <!-- TODO: 教师照片与个人主页链接后续提供 -->
+          <div class="instructor">
+            <a href="#">
+              <div class="instructorphoto">
+                <img src="image/图片1.png" alt="马晓光">
+              </div>
+              <div>马晓光</div>
+            </a>
+            <div>主讲教师 · 人工智能学院</div>
+          </div>
+
+          <div class="ca-section">
+            <h3>助教团队</h3>
+            <!-- TODO: 助教信息、照片与链接后续提供 -->
+            <div class="ca-list">
+            </div>
+          </div>
+        </div>
+        </div>
+        <!-- 教学安排 -->
+        <div class="sechighlight">
+          <div class="container sec" id="logistics">
+            <h2>教学安排</h2>
+            <ul>
+              <li>
+                <b>课程组织：</b>课程共 2.5 周学时（60 学时），按 6 个理论章节和 10 个实验项目组织，建议 16 周完成：
+                第 1—4 周完成安全、环境和标定准入；第 5—9 周完成遥操作、数据集与 BC/ACT 基线；
+                第 10—14 周推进 Diffusion、SmolVLA 和统一评测；第 15—16 周完成创新实验、跨组复现及论文初稿。
+              </li>
+              <li>
+                <b>课程设计：</b>具身智能 Manipulation 综合创新项目融入实验九和实验十，
+                采用 6 组 × 5 人的项目组织，角色轮换；教师和助教进行阶段审查、代码走查、跨组复现与个人答辩。
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="container sec" id="schedule" style="margin-top:-20px">
+          <br>
+          <h2>教学日历（Schedule）</h2>
+
+          <div class="table-responsive">
+              <table class="table table-bordered">
+<thead>
+              <tr class="active">
+                <th style="width: 10%">学时次</th>
+                <th style="width: 30%">讲课内容（章节与题目）</th>
+                <th style="width: 38%">主要内容</th>
+                <th style="width: 22%">课后习题、作业与验收</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>第1—4学时</td>
+                <td>第1—2章 课程启动、安全与工程环境</td>
+                <td>具身智能技术路线与数据—策略—评测闭环；安全规范与科研诚信；Linux、Git及环境配置，建立小组仓库。</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>第5—8学时</td>
+                <td>实验一 工位搭建与安全验收</td>
+                <td>设备清点、驱动安装与通信检查；限速、限位、急停及工作空间检查；练习上电操作与异常处置。</td>
+                <td><span class="secondary-event">课堂达标考核：安全准入与工位操作检查，留存安全检查表。</span></td>
+              </tr>
+              <tr>
+                <td>第9—12学时</td>
+                <td>第3章；实验二（1） 机械臂本体、坐标系与标定</td>
+                <td>机械臂关节、末端执行器与坐标变换；零位校准、相机内外参标定及误差分析。</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>第13—16学时</td>
+                <td>实验二（2）；实验三（1） 标定复核与遥操作搭建</td>
+                <td>完成手眼标定与重复精度检查；搭建主从臂或手柄遥操作流程，调试动作映射与控制频率。</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>第17—20学时</td>
+                <td>实验三（2） 遥操作与数据同步</td>
+                <td>视频、状态和动作的时间戳同步；采集、回放有效轨迹，检查延迟、丢帧及轨迹质量。</td>
+                <td><span class="secondary-event">阶段验收：标定结果与轨迹回放。提交标定记录及不少于10条有效轨迹。</span></td>
+              </tr>
+              <tr>
+                <td>第21—24学时</td>
+                <td>第4章；实验四（1） 示教数据与LeRobot数据集</td>
+                <td>观测、状态、动作与模仿学习基础；配置episode与feature，采集示教数据，完成训练、验证及测试划分。</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>第25—28学时</td>
+                <td>实验四（2） LeRobot数据集V0与质量检查</td>
+                <td>检查同步性、完整性、数据泄漏与许可证；建立数据卡、版本号和哈希，开展跨组数据审计。</td>
+                <td><span class="secondary-event">数据集达标验收：提交数据集V0及数据卡，通过完整性与划分检查。</span></td>
+              </tr>
+              <tr>
+                <td>第29—32学时</td>
+                <td>实验五（1） 行为克隆基线训练</td>
+                <td>配置并训练轻量BC模型；观察训练曲线，分析过拟合与离线评估结果，保存模型及训练日志。</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>第33—36学时</td>
+                <td>第5章；实验五（2）、六（1） BC实机测试与ACT训练</td>
+                <td>完成BC低速实机推理与失败分类；学习动作分块与时序建模，配置并训练ACT策略。</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>第37—40学时</td>
+                <td>实验六（2） ACT复现与中期质量门</td>
+                <td>在统一协议下比较BC与ACT的实机表现；开展跨组复现，分析误差来源，完成中期演示与个人口试。</td>
+                <td><span class="secondary-event">中期达标考核：BC/ACT运行演示、对比结果及个人口试。提交代码与测试记录。</span></td>
+              </tr>
+              <tr>
+                <td>第41—44学时</td>
+                <td>第5章；实验七 Diffusion类策略复现</td>
+                <td>生成式策略与采样原理；完成扩散或流匹配策略训练，记录成功率、推理延迟和资源消耗，与BC、ACT比较。</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>第45—48学时</td>
+                <td>第5章；实验八 SmolVLA推理与小数据适配</td>
+                <td>视觉—语言—动作对齐；加载预训练模型，规范语言指令，完成基线推理或LoRA、小数据适配实验。</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>第49—52学时</td>
+                <td>第6章；实验九（1） 实验设计与统一评测</td>
+                <td>确定主指标、随机种子及公平预算；提出可证伪改进，制定主实验、关键消融及分布外（OOD）测试方案。</td>
+                <td><span class="secondary-event">阶段验收：检查策略复现与SmolVLA运行结果；审核统一评测方案及改进实验计划。</span></td>
+              </tr>
+              <tr>
+                <td>第53—56学时</td>
+                <td>实验九（2）；第6章 创新实验与科研表达</td>
+                <td>开展位置、光照及物体变化测试，完成主实验与关键消融；统计分析、失败复盘，整理图表与论文初稿。</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>第57—60学时</td>
+                <td>实验十 期末演示、跨组复现与论文初稿</td>
+                <td>完成端到端实机演示、跨组复现与答辩；整理README、数据及模型说明、实机视频，说明个人贡献。</td>
+                <td><span class="secondary-event">期末验收：提交完整复现包、不少于40%的EI论文初稿及个人贡献声明。</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="footnote">* 具体日期与内容可能根据实际教学进度调整；阶段验收未通过者须按质量门要求整改后复核。</div>
+
+        </div>
+      </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="./EI-TJU/bootstrap.min.js"></script>
+    
+    <div class="container sec" id="grading">
+      <h2>考核与评价方式</h2>
+      <p>
+        本课程采用项目制过程考核，不设置以闭卷考试为主的期末笔试。
+        课程总评成绩 ＝ <b>LeRobot 全链路与强基线复现（40%）</b> ＋ <b>模型提高与对比实验（40%）</b> ＋ <b>EI 论文初稿与开源材料（20%）</b>。
+        评价证据包括可运行代码与系统、数据/模型/实验日志、对比与创新实验、论文或报告、跨组复现、个人代码走查和口试。
+        团队成果与个人证据结合评定；总评达到 60 分，且通过个人口试及安全、诚信检查方为合格。
+        外部论文录用属于荣誉性成果，不作为课程及格的唯一条件。
+      </p>
+      <ul>
+        <li><b>LeRobot 全链路与强基线复现（40%）</b>
+          <ul>
+            <li>完成标定—遥操作—数据—训练—部署闭环，在统一协议下复现 2—3 个代表性基线，并提交环境、数据卡、日志和跨组复现证据。</li>
+            <li>90—100：闭环完整、结果稳定，跨组可复现，证据链充分且能解释误差；60—74：完成基本闭环和至少 2 个基线，提交基本验证材料。</li>
+          </ul>
+        </li>
+        <li><b>模型提高与对比实验（40%）</b>
+          <ul>
+            <li>提出 1 个可证伪改进，完成主实验、关键消融、OOD/鲁棒性测试和失败分析；在统一协议下与强基线公平比较。</li>
+            <li>90—100：证据充分、统计可靠、机制解释清楚；60—74：完成主实验和基本对比，结论边界说明较清楚。</li>
+          </ul>
+        </li>
+        <li><b>EI 论文初稿与开源材料（20%）</b>
+          <ul>
+            <li>完成 EI 选题及不少于 40% 的论文初稿，提交 README、实机视频、数据/模型说明、实验记录和个人贡献声明。</li>
+            <li>90—100：论证清楚、图表规范，材料完整，可直接继续完善投稿；60—74：提交规定初稿和基本材料，能够说明本人贡献。</li>
+          </ul>
+        </li>
+      </ul>
+      <p>
+        任课教师和助教将保留预注册、代码版本、数据哈希、配置、训练日志、完整实机回合、失败记录、演示、答辩和贡献声明，
+        作为课程目标达成与成绩评定依据。出现数据造假、虚构引用、严重安全违规或无法解释本人核心工作时，按培养方案执行一票否决。
+      </p>
+    </div>
+    
+    
+
+
+    <div class="container sec" id="content">
+      <h2>理论与实验教学内容</h2>
+      <h3>理论章节（授课与自学）</h3>
+      <ul>
+        <li><b>第1章 课程启动、技术版图与安全：</b>具身智能与传统 AI/机器人控制；数据—策略—评测生命周期；实验室安全、急停与责任边界。</li>
+        <li><b>第2章 Linux、Git 与可复现环境：</b>Linux 文件与进程基础；Git 分支、提交与代码审查；环境管理、容器和依赖锁定。</li>
+        <li><b>第3章 机械臂本体、坐标系与标定：</b>关节、末端执行器与控制模式；基座、相机和末端坐标系；零位、相机和手眼标定误差。</li>
+        <li><b>第4章 示教数据与模仿学习：</b>观测、状态、动作和轨迹；行为克隆及分布偏移；数据划分、泄漏与示范质量。</li>
+        <li><b>第5章 ACT、Diffusion 与 VLA 策略：</b>动作分块与时序建模；生成式动作分布与采样；视觉—语言—动作对齐及 SmolVLA。</li>
+        <li><b>第6章 实验设计与科研表达：</b>主指标、随机种子与置信区间；公平数据/算力预算和预注册；失败分类、消融及 EI 论文结构。</li>
+      </ul>
+      <h3>实验项目</h3>
+      <ul>
+        <li><b>实验一 工位搭建与安全验收：</b>设备清点与编号、驱动安装与通信检查，限速、限位、急停和工作空间安全检查。</li>
+        <li><b>实验二 机械臂与相机标定：</b>零位和末端校准、相机内外参及手眼标定，形成标定档案。</li>
+        <li><b>实验三 遥操作与数据同步：</b>主从臂或手柄遥操作流程，时间戳同步、轨迹回放与丢帧诊断。</li>
+        <li><b>实验四 LeRobot 数据集 V0：</b>配置 episode 与 feature，数据划分、数据卡、版本号和哈希及跨组质量审计。</li>
+        <li><b>实验五 行为克隆基线：</b>训练轻量 BC，离线评估、低速实机推理和失败分类。</li>
+        <li><b>实验六 ACT 复现与中期质量门：</b>统一协议下与 BC 比较，跨组复现并分析复现偏差。</li>
+        <li><b>实验七 Diffusion 类策略复现：</b>扩散或流匹配策略训练，记录采样步数、推理延迟和资源消耗。</li>
+        <li><b>实验八 SmolVLA 推理与小数据适配：</b>加载预训练模型，完成推理、LoRA 或小数据微调及任务适配。</li>
+        <li><b>实验九 统一评测与创新实验：</b>位置、光照和物体 OOD 测试，可证伪改进、关键消融与失败挖掘。</li>
+        <li><b>实验十 期末 Demo、跨组复现与论文初稿：</b>端到端实机演示、按 README 跨组复现、EI 论文初稿与个人贡献声明。</li>
+      </ul>
+    </div>
+
+    <div class="container sec" id="projects">
+      <h2>课程项目（课程设计）</h2>
+      <p>
+        课程设计名称：<b>具身智能 Manipulation 综合创新项目</b>。基于统一数据与评测协议，提出一个可证伪的策略或数据改进，
+        完成主实验、关键消融、OOD/鲁棒性测试、失败分析和可复现材料整理。
+        采用 6 组 × 5 人的项目组织，角色轮换；教师和助教进行阶段审查、代码走查、跨组复现与个人答辩。
+        课程设计任务融入实验九和实验十，必须保留代码版本、数据哈希、训练日志、完整实机回合和贡献声明。
+      </p>
+    </div>
+
+    <div class="container sec" id="policies">
+      <h2>课程政策</h2>
+
+      <h3>质量门与通过条件</h3>
+      <ul>
+        <li><b>G0 可执行性：</b>环境可安装、设备可通信、数据可读取、代码可运行。</li>
+        <li><b>G1 模型与项目：</b>课堂任务按要求完成、模型实验可运行、综合项目完成实机回合。</li>
+        <li><b>G2 结果与分析：</b>评测条件公平、结果分析完整、失败原因可解释、恢复过程有记录。</li>
+        <li><b>G3 过程与安全：</b>配置与模型版本明确、完整执行日志保留、异常事件与人工接管有记录、答辩与安全说明完成。</li>
+        <li>总评达到 60 分并完成安全与过程记录方为通过；成绩管理中通过计 100，未通过计 0。</li>
+      </ul>
+
+      <h3>安全与诚信底线</h3>
+      <ul>
+        <li>不得绕过急停、限速、限位和工作空间约束；不得隐瞒重大安全事件。</li>
+        <li>不得伪造数据、日志、结果或引用；不得删除失败证据、只保留成功回合。</li>
+        <li>不得以无法解释的他人代码作为个人工作；不得以剪辑视频替代完整实机记录。</li>
+        <li>出现数据造假、虚构引用、严重安全违规或无法解释本人核心工作时，执行一票否决。</li>
+      </ul>
+
+      <h3>最终提交清单</h3>
+      <ul>
+        <li>课堂任务与数据检查记录 ｜ 系统方案 ｜ 环境与配置 ｜ 模型版本与 Checkpoint</li>
+        <li>训练/执行日志 ｜ 完整实验演示记录 ｜ 结果分析 ｜ 失败案例与恢复分析</li>
+        <li>异常事件与人工接管记录 ｜ 答辩与安全说明</li>
+      </ul>
+
+      <h3>与课程团队沟通</h3>
+      <ul>
+        <li>请先仔细阅读课程文档与实验手册，再提出一般性问题。</li>
+        <li>问题请在答疑时间或课程群中提出；涉及安全的事件必须立即报告教师或助教。</li>
+      </ul>
+
+  
+
+
+  
+
+</div></body></html>
